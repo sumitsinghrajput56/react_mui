@@ -2,38 +2,29 @@ import * as React from "react";
 import { pink } from "@mui/material/colors";
 import Checkbox from "@mui/material/Checkbox";
 import { Favorite, FavoriteBorder } from "@mui/icons-material";
+import { Radio } from "@mui/material";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 
 export default function ColorCheckboxes() {
 
-  const [name,setName]=React.useState([]);
+  const [gender,setGender]=React.useState("male");
 
-  function setValue(e)
-  {
-    const data=name;
-    data.push(e.target.value);
-    console.log(name);
-
-  }
+ const setValue=(e)=>{
+   console.log(gender);
+   setGender(e.target.value);
+ }
 
   return (
     <div>
-      <Checkbox {...label} defaultChecked  icon={<FavoriteBorder/>} checkedIcon={<Favorite/>} />
-      <Checkbox {...label} defaultChecked color="secondary" value="firstCheckbox" onChange={(e)=>setValue(e)} />
-      <Checkbox {...label} defaultChecked color="success" value="secondCheckbox" onChange={(e)=>setValue(e)} />
-      <Checkbox {...label} defaultChecked color="default" value="thiredCheckbox" onChange={(e)=>setValue(e)} indeterminate />
-      <Checkbox
-        {...label}
-        defaultChecked
-        sx={{
-          color: pink[800],
-          "&.Mui-checked": {
-            color: pink[600],
-          },
-        }}
-        value="forthCheckbox" onChange={(e)=>setValue(e)}
-      />
+      <div>
+        <Radio color="secondary"  value="male" checked={gender==="male"} onChange={setValue}/>
+        <span>male</span>
+      </div>
+       <div>
+        <Radio color="primary" value="female" checked={gender==="female"}  onChange={setValue} />
+        <span>female</span>
+      </div>
     </div>
   );
 }
