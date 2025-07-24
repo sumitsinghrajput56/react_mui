@@ -21,7 +21,7 @@ export default function ColorCheckboxes() {
       {/* <Checkbox {...label} defaultChecked /> */}
       <Checkbox {...label} defaultChecked color="secondary" value="firstCheckbox" onChange={(e)=>setValue(e)} />
       <Checkbox {...label} defaultChecked color="success" value="secondCheckbox" onChange={(e)=>setValue(e)} />
-      <Checkbox {...label} defaultChecked color="default" value="thiredCheckbox" onChange={(e)=>setValue(e)} />
+      <Checkbox {...label} defaultChecked color="default" value="thiredCheckbox" onChange={(e)=>setValue(e)} indeterminate />
       <Checkbox
         {...label}
         defaultChecked
