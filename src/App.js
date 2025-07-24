@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Button } from "@mui/material";
+import { Button, ButtonGroup } from "@mui/material";
 
 import { Delete } from "@mui/icons-material";
 
@@ -11,21 +11,12 @@ function App() {
   }
   return (
     <div className="App">
-        <Button color="primary" variant="contained"  onClick={customizeMe} size="small"  endIcon={<Delete/>}>Text</Button>
-        <br></br><Button variant="contained">Contained</Button>
-        <Button variant="outlined">Outlined</Button><br></br>
+    <ButtonGroup variant="outlined" color="secondary" orientation="vertical" >
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+    </ButtonGroup>
 
-        <Button>Primary</Button>
-        <Button disabled>Disabled</Button>
-        <Button href="#text-buttons">Link</Button><br></br>
-
-        <Button variant="contained">Contained</Button>
-        <Button variant="contained" disabled>
-          Disabled
-        </Button>
-        <Button variant="contained" href="#contained-buttons">
-          Link
-        </Button>
     </div>
   );
 }
