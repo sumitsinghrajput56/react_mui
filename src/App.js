@@ -3,9 +3,13 @@ import "./App.css";
 import { Button } from "@mui/material";
 
 function App() {
+  function customizeMe()
+  {
+    alert("hello guys");
+  }
   return (
     <div className="App">
-        <Button color="secondary" variant="text" onClick={()=>alert("hello guys")}>Text</Button>
+        <Button color="secondary" variant="text" onClick={customizeMe} size="small" disabled>Text</Button>
         <Button variant="contained">Contained</Button>
         <Button variant="outlined">Outlined</Button><br></br>
 
