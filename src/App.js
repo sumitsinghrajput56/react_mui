@@ -11,8 +11,8 @@ function App() {
   }
   return (
     <div className="App">
-        <Button color="secondary" variant="text" onClick={customizeMe} size="small" disabled startIcon={<Delete/>}>Text</Button>
-        <Button variant="contained">Contained</Button>
+        <Button color="primary" variant="contained"  onClick={customizeMe} size="small"  endIcon={<Delete/>}>Text</Button>
+        <br></br><Button variant="contained">Contained</Button>
         <Button variant="outlined">Outlined</Button><br></br>
 
         <Button>Primary</Button>
